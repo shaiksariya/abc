@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Vehicle Fuel Efficiency Predictor</title>
+</head>
+<body>
+  <div class="overlay">
+    <div class="glow"></div>
+    <div class="container">
+      <h1>🚗 Fuel Efficiency Predictor</h1>
+      <p>Estimate your vehicle’s MPG by entering engine size and weight.</p>
+      <form action="/predict" method="post">
+        <div class="form-group">
+          <label for="engine_size">Engine Size (Liters)</label>
+          <input type="text" name="engine_size" id="engine_size" placeholder="e.g. 2.5" required>
+        </div>
+        <div class="form-group">
+          <label for="vehicle_weight">Vehicle Weight (kg)</label>
+          <input type="text" name="vehicle_weight" id="vehicle_weight" placeholder="e.g. 1500" required>
+        </div>
+        <button type="submit">🔍 Predict MPG</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
